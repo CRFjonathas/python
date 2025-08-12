@@ -8,14 +8,17 @@ for (inicialização; condição; incremento) {
 for(int i = 0; i < 10; i++);{
     printf("%d\n"i)
 }
-    >>> 1 2 3 4 5 6 7 8 9 <<<
+    >>> 0 1 2 3 4 5 6 7 8 9 <<<
 
 ''' 
 
-# EM PYTHON
+'''
+EM PYTHON
 
-#for variável in iterável:
-#    print(i)
+for variável in iterável:
+    print(i)
+
+'''
 
 for i in range(10):
     print(i)
