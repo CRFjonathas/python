@@ -11,3 +11,6 @@ def aumentar(preço, porcentagem):
 def diminuir(preço, porcentagem):
     desconto = (porcentagem / 100) * preço
     return preço - desconto
+
+def moeda(preço=0, moeda='R$'):
+    return f'{moeda}{preço:.2f}'.replace('.', ',')
