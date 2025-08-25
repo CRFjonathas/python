@@ -1,4 +1,4 @@
-from ex107 import moeda
+import moeda
 
 p = float(input('Digite o preço: R$ '))
 
