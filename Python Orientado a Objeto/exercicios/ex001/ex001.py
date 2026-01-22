@@ -15,13 +15,11 @@ class Aluno:
 a1 = Aluno()
 a1.nome = "Jonathas"
 a1.idade = 21
-a1.mensagem()
-print(a1.aniversario())
-a1.mensagem()
+a1.aniversario()
+print(a1.mensagem())
 
 a2 = Aluno()
-a2.nome = "Jonathas"
-a2.idade = 21
-a2.mensagem()
-print(a1.aniversario())
-a2.mensagem()
+a2.nome = "Mariely"
+a2.idade = 27
+a2.aniversario()
+print(a2.mensagem())

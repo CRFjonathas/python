@@ -1,28 +1,24 @@
 # Declaração de Classe
 
-class Jogador:
-    def __init__(self):     # Metodo Contrutor
-        # Atributos de Instancia
-        self.nome = ""
-        self.gol = 0
+class Aluno:
+    def __init__(self, nome = "vazio", idade = 0):
+        self.nome = nome
+        self.idade = idade
 
-    # Metodos de Instancia
-    def artilheiro(self):
-        self.gol += 1
+    def aniversario(self):
+        self.idade += 1
 
-    def mensagem(self):
-        return f"O jogador {self.nome} tem {self.gol} gols na artilharia do campeonato."
-
-
+    def __str__(self):
+        return f"{self.nome} é Aluno(a) e tem {self.idade} anos de idade."
+    
 # Declaração de Objeto
+a1 = Aluno("Jonathas", 21)
+a1.aniversario()
+print(a1)
 
-j1 = Jogador()
-j1.nome = "Bruno Henrique"
-j1.gol = 16
-print(j1.mensagem())
+a2 = Aluno("Mariely", 27)
+a2.aniversario()
+print(a2)
 
-j2 = Jogador()
-j2.nome = "Arrascaeta"
-j2.gol = 10
-j2.artilheiro()
-print(j2.mensagem())
+a3 = Aluno()
+print(a3)
