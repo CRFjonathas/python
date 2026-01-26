@@ -6,7 +6,7 @@ c1.sacar(200)
 
 c1.saldo = -1500
 
-print(f"Até agora temos {Conta.get_total_contas()} cconta(s) criada(s)")
+print(f"Até agora temos {Conta.get_total_contas()} conta(s) criada(s)")
 print(f"Muito Obrigado por ser cliente do {Conta.nome_banco()}")
 
 c1.gerar_saldo()

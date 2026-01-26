@@ -8,7 +8,7 @@ class Conta:
     
     @staticmethod
     def nome_banco():
-        return "Banco Nicacio"
+        return "Banco Nicacio" 
 
     def __init__(self, numero, saldo):
         self.__numero = numero
