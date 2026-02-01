@@ -1,9 +1,9 @@
 def pesquisa_binaraia(lista, item):
     baixo = 0                                       # Alto e baixo acompanham a parte da lista que você está proucurando.
-    alto = len(lista)                               # Alto e baixo acompanham a parte da lista que você está proucurando.
+    alto = len(lista) - 1                             # Alto e baixo acompanham a parte da lista que você está proucurando.
 
-    while baixo <= alto:                            # Enqunato ainda não conseguiu chegar a um único elemento...
-        meio = (baixo + alto) / 2                   # ... Verifica o elemento central.
+    while baixo <= alto:                            # Enquanto ainda não conseguiu chegar a um único elemento...
+        meio = (baixo + alto) // 2                   # ... Verifica o elemento central.
         chute = lista[meio]
 
         if chute == item:                           # Acha o item.
