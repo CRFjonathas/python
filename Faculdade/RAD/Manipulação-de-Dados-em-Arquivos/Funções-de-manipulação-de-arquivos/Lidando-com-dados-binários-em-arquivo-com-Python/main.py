@@ -26,3 +26,11 @@ def main():
     # Exemplo: inverter os bytes
     with open("copy_img.bin", "rb") as file:
         data = bytearray(file.read())
+        
+    # Carregar e mostrar a imagem manipulada
+    modified_data = np.frombuffer(data, dtype=np.uint8).reshape(img_data.shape)
+    modified_img = Image.fromarray(modified_data)
+    modified_img.show()
+ 
+if __name__ == "__main__":
+    main()
