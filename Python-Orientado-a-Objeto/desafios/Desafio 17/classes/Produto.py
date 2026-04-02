@@ -1,5 +1,4 @@
 from rich.panel import Panel
-from rich.text import Text
 from rich import print
 
 class Produto:
@@ -8,6 +7,9 @@ class Produto:
         self.preco = preco
 
     def etiqueta(self):
-        texto = Text(f"{self.nome}\n------------------------------\n..........R${self.preco:,.2f}..........", justify="center")
-        painel = Panel(texto, title="Produto", width=35)
+        texto = f"{self.nome.center(30, ' ')}"
+        texto += f"{'-' * 30}"
+        precof = f"R${self.preco:,.2f}"
+        texto += f"{precof.center(30, '.')}"
+        painel = Panel(texto, title="Produto", width=34)
         print(painel)
