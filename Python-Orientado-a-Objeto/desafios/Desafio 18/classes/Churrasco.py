@@ -11,7 +11,7 @@ class Churrasco:
         self.participantes = quant
 
     def qtd_carne(self) -> float:
-       return self.participantes * Churrasco.consumo_padrao
+        return self.participantes * Churrasco.consumo_padrao
     
     def custo_total(self) -> float:
         return self.qtd_carne() * Churrasco.preco_kg
