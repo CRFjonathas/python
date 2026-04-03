@@ -1,31 +1,32 @@
 from rich import print
 
 class Caneta:
-    def __init__(self, cor):
-        self.cor = cor
+    def __init__(self, cor = "azul"):
+        escolha = ""
+        match cor.lower().strip():
+            case "azul":
+                escolha = "[blue]"
+            case "vermelho" | "vermelha":
+                escolha = "[red]"
+            case "verde":
+                escolha = "[green]"
+            case _:
+                escolha = "[white]"
 
-        self.mapa_cores = {
-            "vermelho": "red",
-            "azul": "blue",
-            "verde": "green",
-            "rosa": "pink",
-            "amarelo": "yellow",
-            "preto": "black",
-            "branco":"white"
-        }
-        
-        self.destampa = False
+        self.cor = escolha
+        self.tampada = True
 
-    def destampar(self):
-        self.destampa = True
-    
     def escrever(self, msg):
-        cor_ingles = self.mapa_cores[self.cor]
-        if self.destampa == True:
-            print(f"[{cor_ingles}]{msg}[/]", end=" ")
+        if self.tampada:
+            print(":prohibited: A caneta está tampada")
         else:
-            print("A caneta está tampada")
+            print(f"{self.cor}{msg}[/]", end=' ')
 
-    def quebrar_linha(self, linha):
-        linha -= 1
-        print("\n" * linha)
+    def quebrar_linha(self, linha = 1):
+        print("\n" * linha, end='')
+
+    def tampar(self):
+        self.tampada = True
+    
+    def destampar(self):
+        self.tampada = False
